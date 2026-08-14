@@ -5,22 +5,18 @@
 
 **Image Compressor** is a [webxdc](https://webxdc.org) app that runs inside **Delta Chat**, shrinking images right on your device before you share them:
 
-- 🖼️ **Image** — pick any image from your device and get a compressed copy.
-- 🎚️ **Quality** — fine-tune the compression quality from 5% to 100%.
-- 📦 **Size Limit** — target a maximum file size (from 50KB up to 5MB, default 300KB).
-- 🎨 **Format** — output as WEBP (recommended), JPEG or PNG.
+- 🖼️ **Image** — Pick any image from your device and get a compressed copy
+- 🎚️ **Quality** — Fine-tune the compression quality from 5% to 100%
+- 📦 **Size Limit** — Target a maximum file size (from 50 KB up to 5 MB, default 300 KB); the app automatically squeezes the image down to your chosen limit
+- 🎨 **Format** — Output as WEBP (recommended), JPEG, or PNG
+- 🔒 **Client-side compression** — Images never leave your device; everything runs in your browser with no server
+- 👁️ **Live preview & stats** — See the compressed image along with original size, compressed size, and compression ratio
+- ⏳ **Progress indicator** — Shows compression progress while processing
+- 💬 **Send to a chat** — The compressed image is sent as a webxdc update, with an optional accompanying message
 
 ## Screenshot
 
 ![screenshot](./git-assets/screenshot.webp)
-
-## Features
-
-- **Client-side compression** - Images never leave your device; everything runs in your browser with no server
-- **Size-targeted compression** - The app squeezes the image down to your chosen size limit automatically
-- **Live preview & stats** - See the compressed image with original size, compressed size and compression ratio
-- **Progress indicator** - Shows compression progress while processing
-- **Send to a chat** - The compressed image is sent as a webxdc update, with an optional accompanying message
 
 ## Development
 
