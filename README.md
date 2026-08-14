@@ -1,4 +1,7 @@
-# Image Compressor
+<p align="center">
+  <img src="./icon.png" alt="icon">
+</p>
+<h1 align="center">Image Compressor</h1>
 
 **Image Compressor** is a [webxdc](https://webxdc.org) app that runs inside **Delta Chat**, shrinking images right on your device before you share them:
 
