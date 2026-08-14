@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image Compressor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <h2 id="title">Image Compressor</h2>
+      <div class="item">
+        <div>Image:</div>
+        <input id="fileInput" type="file" accept="image/*" id="upload" />
+      </div>
+      <div class="item">
+        <div>
+          Quality:
+          <span id="qualitySpan">50%</span>
+        </div>
+        <input
+          type="range"
+          id="qualityInput"
+          value="50"
+          min="5"
+          max="100"
+          step="5"
+        />
+      </div>
+      <div class="item">
+        <div>
+          Size Limit:
+          <span id="maxFileSizeSpan">300KB</span>
+        </div>
+        <input
+          type="range"
+          id="maxFileSizeInput"
+          value="300"
+          min="50"
+          max="5000"
+          step="50"
+        />
+      </div>
+
+      <div class="item">
+        Format:
+        <select id="fileTypeSelect">
+          <option value="webp" selected>WEBP (Recommanded)</option>
+          <option value="jpeg">JPEG</option>
+          <option value="png">PNG</option>
+        </select>
+      </div>
+
+      <div id="info">
+        <p>
+          <img class="icon" src="icons/file.svg" /> Original Size:
+          <span id="originalFileSizeSpan"></span>
+        </p>
+        <p>
+          <img class="icon" src="icons/archive.svg" /> Compressed Size:
+          <span id="compressedFileSizeSpan"></span>
+        </p>
+        <p>
+          <img class="icon" src="icons/leaf.svg" /> Compression:
+          <span id="compressionRatioSpan"></span>
+        </p>
+      </div>
+      <div id="compressedImgDiv">
+        <img id="compressedImg" />
+
+        <div id="loadingDiv"></div>
+      </div>
+
+      <div id="sendToChatDiv">
+        <input
+          type="text"
+          id="sendToChatInput"
+          placeholder="Message Text(Optional)"
+          value=""
+        />
+        <button id="sendToChatButton">Send to a chat</button>
+        <div id="sendToChatBlocked" class="hide">You aren't in WEBXDC</div>
+      </div>
+    </div>
+  </body>
+
+  <script src="webxdc.js"></script>
+  <script src="browser-image-compression.js"></script>
+  <script src="script.js"></script>
+</html>

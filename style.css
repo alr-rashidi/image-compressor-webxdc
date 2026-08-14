@@ -1,0 +1,358 @@
+:root {
+  color-scheme: light dark;
+
+  /* Neo-Brutalism Theme Variables */
+  --bg: light-dark(#ffffff, #121212);
+  --bg1: light-dark(#f8f6f0, #1a1a1a);
+  --bg2: light-dark(#f0ebdf, #232323);
+  --button-bg: light-dark(#ffde59, #ff4757);
+  --color: light-dark(#000000, #ffffff);
+  --color1: light-dark(#121212, #f8f6f0);
+  --slider-thumb: light-dark(#000000, #ffffff);
+  --webxdc-blocked-bg: light-dark(#ffffffc4, #000000c4);
+  --border-color: light-dark(#ffffff, #000000);
+  --shadow-color: light-dark(#ffffff, #000000);
+
+  --border: 3px solid var(--border-color);
+  --input-radius: 6px;
+
+  --neo-shadow-sm: 3px 3px 0px var(--shadow-color);
+  --neo-shadow: 4px 4px 0px var(--shadow-color);
+  --neo-shadow-lg: 5px 5px 0px var(--shadow-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--color);
+  outline-offset: 2px;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.8rem;
+  background: var(--bg2);
+  border: 2px solid var(--border-color);
+  border-radius: var(--input-radius);
+  box-shadow: var(--neo-shadow-sm);
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 100%;
+  background: var(--bg1);
+  border-radius: calc(var(--input-radius) - 2px);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 24px;
+  background: var(--button-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px var(--shadow-color);
+  cursor: pointer;
+  margin-top: -5px;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15) translate(-1px, -1px);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+select {
+  padding: 0.4rem 0.6rem;
+  font-weight: 700;
+  border: var(--border);
+  border-radius: var(--input-radius);
+  background: var(--bg2);
+  color: var(--color);
+  box-shadow: var(--neo-shadow-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+select:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--neo-shadow);
+}
+
+body {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--color);
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Tahoma,
+    "Vazirmatn",
+    sans-serif;
+  background-size: cover;
+}
+
+#main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30rem;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: var(--bg1);
+  padding: 1.25rem;
+  color: var(--color);
+  border: 4px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--neo-shadow-lg);
+}
+
+#main::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  bottom: -12px;
+  right: -12px;
+  content: " ";
+  background: var(--button-bg);
+  z-index: -1;
+  border: 4px solid var(--border-color);
+  border-radius: 12px;
+}
+
+#title {
+  padding: 0 0 0.5rem 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid var(--border-color);
+  margin-bottom: 0.75rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.6rem 0.4rem;
+  gap: 1rem;
+  /* border-bottom: 3px solid var(--border-color); */
+  font-weight: 700;
+}
+
+.item div {
+  width: 60%;
+}
+
+input {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type="range"]):not([type="checkbox"]) {
+  padding: 0.4rem 0.6rem;
+  font-weight: 700;
+  border: var(--border);
+  border-radius: var(--input-radius);
+  background: var(--bg2);
+  color: var(--color);
+  box-shadow: var(--neo-shadow-sm);
+  transition: all 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input:not([type="range"]):not([type="checkbox"]):focus {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--neo-shadow);
+  outline: none;
+}
+
+#compressedImgDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  min-height: 30vh;
+  flex: 1;
+  margin: 0.75rem 0;
+  /* padding: 0.5rem; */
+  overflow: auto;
+  border: var(--border);
+  border-radius: var(--input-radius);
+  background: var(--bg2);
+  box-shadow: var(--neo-shadow-sm);
+}
+
+#compressedImg {
+  width: 100%;
+  min-height: max-content;
+  height: 100%;
+  border-radius: calc(var(--input-radius) - 2px);
+  object-fit: contain;
+}
+
+#loadingDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  opacity: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+  color: var(--button-bg);
+  text-shadow: 3px 3px 0px var(--border-color);
+  transition: 0.3s ease;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+#info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  margin: 0.4rem 0;
+  border: var(--border);
+  border-radius: var(--input-radius);
+  background: var(--bg2);
+  box-shadow: var(--neo-shadow-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+#info p {
+  display: flex;
+  align-items: center;
+  color: var(--color1);
+  gap: 0.4rem;
+}
+
+.icon {
+  height: 1.2rem;
+  width: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon {
+    filter: invert(1);
+  }
+}
+
+#sendToChatDiv {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 1;
+  transition: 0.3s ease;
+  min-height: 2.75rem;
+  border-radius: var(--input-radius);
+  overflow: visible;
+  margin-top: 0.4rem;
+}
+
+#sendToChatBlocked {
+  position: absolute;
+  inset: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--webxdc-blocked-bg);
+  backdrop-filter: blur(2px);
+  border: 3px dashed var(--border-color);
+  border-radius: var(--input-radius);
+  font-weight: 800;
+  z-index: 10;
+}
+
+#sendToChatBlocked.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#sendToChatInput {
+  background: var(--bg1);
+  border: var(--border);
+  color: var(--color);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--input-radius);
+  box-shadow: var(--neo-shadow-sm);
+  transition: all 0.15s ease;
+}
+
+#sendToChatInput:focus {
+  outline: none;
+  transform: translate(-1px, -1px);
+  box-shadow: var(--neo-shadow);
+}
+
+#sendToChatButton {
+  background: var(--button-bg);
+  color: light-dark(#000000, #ffffff);
+  border: var(--border);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-radius: var(--input-radius);
+  box-shadow: var(--neo-shadow-sm);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+#sendToChatButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--neo-shadow);
+}
+
+#sendToChatButton:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--shadow-color);
+}
